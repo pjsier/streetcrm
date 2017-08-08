@@ -364,7 +364,7 @@ function createProfileLink(model, cell) {
         // Give the profile link an href attribute and make it visible.
         var profileLink = cell.children(".static").children("a.profile-link");
         profileLink.attr("href", getExistingInlinedModelProfileUrl(id, url));
-        profileLink.css("visibility", "visible");
+        profileLink.css("display", "inline");
     }
 }
 
