@@ -723,7 +723,8 @@ class ParticipantAdmin(mixins.AdminArchiveMixin, mixins.SignInSheetAdminMixin, S
                      "participant_zipcode_address")
     list_filter = (admin_filters.ArchivedFilter,)
     list_display = ("name", "US_primary_phone", "institution", "participant_street_address", "participant_city_address",)
-    readonly_fields = ("action_history", "event_history_name")
+    # HAD TO REMOVE event_history_name DUE TO ISSUES
+    readonly_fields = ("action_history",)
     fieldsets = (
         (None, {
             "fields": ("name", "primary_phone",
@@ -770,9 +771,7 @@ class ParticipantAdmin(mixins.AdminArchiveMixin, mixins.SignInSheetAdminMixin, S
         """ HTML history of the events attended by the participant """
         template_name = "admin/includes/event_history.html"
         action_history_template = loader.get_template(template_name)
-        context = template.Context({
-            "events": obj.events,
-        })
+        context = {"events": obj.events}
         return action_history_template.render(context)
 
     # To prevent django from distorting how the event_history method looks tell

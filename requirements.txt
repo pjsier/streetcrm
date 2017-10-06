@@ -1,4 +1,4 @@
-django<1.9
+django<1.12
 configobj
 django-admin-bootstrapped
 django-phonenumber-field
