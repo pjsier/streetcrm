@@ -136,8 +136,6 @@ class InspectMixin:
     @classmethod
     def get_field(cls, name):
         """ Gets a field by it's name """
-        # Updated https://docs.djangoproject.com/en/1.11/ref/models/meta/#retrieving-a-single-field-instance-of-a-model-by-name
-        # return cls._meta.get_field_by_name(name)[0]
         return cls._meta.get_field(name)
 
 class StreetcrmModel(models.Model):

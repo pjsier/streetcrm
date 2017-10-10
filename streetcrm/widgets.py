@@ -36,17 +36,8 @@ class LocalPhoneNumberWidget(forms.TextInput):
             name, value, *args, **kwargs
         )
 
-# class ForeignKeyRadioRenderer(widgets.RadioFieldRenderer):
 
-#     def __init__(self, *args, **kwargs):
-#         super(ForeignKeyRadioRenderer, self).__init__(*args, **kwargs)
-#         # Remove the None value which is "---------" (it's always the first one)
-#         self.choices = self.choices[1:]
-
-
-# class ForeignKeyRadioWidget(forms.RadioSelect):
-#     """ Radio widget that provides radio buttons """
-#     renderer = ForeignKeyRadioRenderer
+# TODO: Replicate removing None value with templates
 class ForeignKeyRadioWidget(forms.RadioSelect):
     pass
 

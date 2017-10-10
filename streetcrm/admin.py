@@ -723,7 +723,7 @@ class ParticipantAdmin(mixins.AdminArchiveMixin, mixins.SignInSheetAdminMixin, S
                      "participant_zipcode_address")
     list_filter = (admin_filters.ArchivedFilter,)
     list_display = ("name", "US_primary_phone", "institution", "participant_street_address", "participant_city_address",)
-    # HAD TO REMOVE event_history_name DUE TO ISSUES
+    # TODO: Fix event_history_name, re-add to readonly_fields
     readonly_fields = ("action_history",)
     fieldsets = (
         (None, {
