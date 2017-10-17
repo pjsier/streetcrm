@@ -37,11 +37,6 @@ class LocalPhoneNumberWidget(forms.TextInput):
         )
 
 
-# TODO: Replicate removing None value with templates
-class ForeignKeyRadioWidget(forms.RadioSelect):
-    pass
-
-
 class TwelveHourTimeWidget(forms.MultiWidget):
     """ 12 Hour time widget that gives back a datetime.time object """
 
